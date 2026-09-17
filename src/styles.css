@@ -45,15 +45,14 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .wrap { max-width: var(--max); margin: 0 auto; padding-left: calc(var(--gutter) + var(--spine)); padding-right: var(--gutter); position: relative; }
 .section { padding-top: var(--s-section); }
 .section__title { font-size: 1.15rem; font-weight: 500; color: var(--muted); letter-spacing: 0; }
-.display { font-size: clamp(2.6rem, 6.5vw, 5.6rem); line-height: 1; letter-spacing: -.03em; }
+.display { color: var(--blue); font-size: clamp(2.6rem, 6.5vw, 5.6rem); line-height: 1; letter-spacing: -.03em; }
 .display--sm { font-size: clamp(2.2rem, 5vw, 4.2rem); }
 .display--xl { font-size: clamp(3rem, 8.5vw, 7.4rem); }
 .display .line, .intro__title .line { display: block; }
 .line--accent { color: var(--blue); }
 
 /* ---------- nav ---------- */
-.nav { position: sticky; top: 0; z-index: var(--z-nav); display: flex; align-items: center; justify-content: space-between; max-width: var(--max); margin: 0 auto; padding: 16px var(--gutter) 16px calc(var(--gutter) + var(--spine)); background: transparent; backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px); transition: background .35s; }
-.nav { padding-bottom: 40px; margin-bottom: -24px; mask-image: linear-gradient(to right, transparent, #000 6% 94%, transparent), linear-gradient(#000 55%, transparent); mask-composite: intersect; -webkit-mask-image: linear-gradient(to right, transparent, #000 6% 94%, transparent), linear-gradient(#000 55%, transparent); -webkit-mask-composite: source-in; }
+.nav { position: sticky; top: 0; z-index: var(--z-nav); display: flex; align-items: center; justify-content: space-between; padding: 16px max(var(--gutter), calc((100% - var(--max)) / 2 + var(--gutter))) 16px max(calc(var(--gutter) + var(--spine)), calc((100% - var(--max)) / 2 + var(--gutter) + var(--spine))); background: transparent; backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px); transition: background .35s; }
 .nav.is-scrolled { background: color-mix(in srgb, var(--bg) 55%, transparent); }
 .nav__brand { display: inline-flex; align-items: center; gap: 6px; font-weight: 800; letter-spacing: .03em; text-decoration: none; font-size: 18px; line-height: 1; }
 .nav__logo { display: block; height: 28px; width: auto; }
@@ -77,21 +76,20 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .caret { display: inline-block; width: .06em; height: .9em; margin-left: .06em; vertical-align: -.06em; background: var(--blue); }
 .caret--idle { animation: blink 1s steps(2, start) infinite; }
 @keyframes blink { to { visibility: hidden; } }
-.intro__label { color: var(--muted); line-height: 1.8; }
-.intro__title { margin-top: var(--s-5); font-size: clamp(2.4rem, 6.4vw, 5.4rem); line-height: 1.02; letter-spacing: -.035em; font-weight: 600; max-width: 14ch; }
+.intro__title { margin-top: 0; font-size: clamp(2.4rem, 6.4vw, 5.4rem); line-height: 1.02; letter-spacing: -.035em; font-weight: 600; max-width: 14ch; }
 .intro__lede { margin-top: var(--s-4); max-width: 46ch; font-size: clamp(1.05rem, 1.5vw, 1.3rem); line-height: 1.5; color: var(--muted); }
 .intro__actions { margin-top: var(--s-5); display: flex; flex-wrap: wrap; align-items: center; gap: 16px 32px; }
 .intro__scroll { color: var(--muted); }
-.btn { display: inline-flex; gap: .6em; padding: 14px 20px; border: 1px solid var(--ink); font-family: var(--mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; transition: background .3s, color .3s, border-color .3s; }
+.btn { display: inline-flex; gap: .6em; padding: 14px 20px; border: 1px solid var(--blue); color: var(--blue); font-family: var(--mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; transition: background .3s, color .3s, border-color .3s; }
 .btn::before, .btn::after { display: inline-block; transition: transform .35s var(--ease); }
 .btn::before { content: "["; }
 .btn::after { content: "]"; }
 .btn:hover::before, .btn:focus-visible::before { transform: translateX(-4px); }
 .btn:hover::after, .btn:focus-visible::after { transform: translateX(4px); }
-.btn:hover, .btn:focus-visible { background: var(--ink); color: var(--bg); }
+.btn:hover, .btn:focus-visible { background: var(--blue); color: #fff; }
 .btn--sm { padding: 12px 16px; }
-.btn--fill { background: var(--ink); color: var(--bg); }
-.btn--fill:hover, .btn--fill:focus-visible { background: var(--blue); border-color: var(--blue); color: #fff; }
+.btn--fill { background: var(--blue); color: #fff; }
+.btn--fill:hover, .btn--fill:focus-visible { background: var(--ink); border-color: var(--ink); color: var(--bg); }
 
 /* ---------- the spine ---------- */
 .story { position: relative; }

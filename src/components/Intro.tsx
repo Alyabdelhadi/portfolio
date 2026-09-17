@@ -8,7 +8,6 @@ export function Intro() {
     <section className="intro" id="top" aria-labelledby="intro-title">
       <div className="wrap intro__grid">
         <div className="intro__text">
-          <Reveal as="p" className="mono intro__label">Software developer<br />Beirut, Lebanon</Reveal>
           <h1 className="intro__title" id="intro-title" aria-label="I don't just build software. I build the solution.">
             <Reveal as="span" className="line" delay={0.1}>I don't just build software.</Reveal>
             <span className="line line--accent"><Typewriter text="I build the solution." delay={1.1} /></span>
