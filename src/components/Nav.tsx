@@ -11,6 +11,13 @@ const links = [
 
 export function Nav() {
   const [active, setActive] = useState<string>("");
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const f = () => setScrolled(window.scrollY > 80);
+    f();
+    window.addEventListener("scroll", f, { passive: true });
+    return () => window.removeEventListener("scroll", f);
+  }, []);
   useEffect(() => {
     const els = links.map(([id]) => document.getElementById(id)).filter((e): e is HTMLElement => !!e);
     const io = new IntersectionObserver(
@@ -21,7 +28,7 @@ export function Nav() {
     return () => io.disconnect();
   }, []);
   return (
-    <header className="nav" aria-label="Site">
+    <header className={`nav${scrolled ? " is-scrolled" : ""}`} aria-label="Site">
       <a className="nav__brand" href="#top" aria-label="Ali Abdelhadi, back to top">
         <img className="nav__logo" src="/img/logo.png" alt="ALI." width={262} height={120} />
       </a>

@@ -52,7 +52,8 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .line--accent { color: var(--blue); }
 
 /* ---------- nav ---------- */
-.nav { position: sticky; top: 0; z-index: var(--z-nav); display: flex; align-items: center; justify-content: space-between; max-width: var(--max); margin: 0 auto; padding: 16px var(--gutter) 16px calc(var(--gutter) + var(--spine)); background: color-mix(in srgb, var(--bg) 72%, transparent); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+.nav { position: sticky; top: 0; z-index: var(--z-nav); display: flex; align-items: center; justify-content: space-between; max-width: var(--max); margin: 0 auto; padding: 16px var(--gutter) 16px calc(var(--gutter) + var(--spine)); background: transparent; backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px); transition: background .35s; }
+.nav.is-scrolled { background: color-mix(in srgb, var(--bg) 55%, transparent); }
 .nav__brand { display: inline-flex; align-items: center; gap: 6px; font-weight: 800; letter-spacing: .03em; text-decoration: none; font-size: 18px; line-height: 1; }
 .nav__logo { display: block; height: 28px; width: auto; }
 .nav__brand b { color: var(--blue); }
@@ -146,7 +147,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .fanin__voter { position: absolute; left: 0; top: 0; width: 6px; height: 6px; margin: -3px 0 0 -3px; border-radius: 50%; background: var(--blue); offset-rotate: 0deg; }
 .fanin__legend { display: flex; justify-content: space-between; margin-top: 130px; color: var(--muted); }
 
-.shot { margin: var(--s-5) 0 0; border: 1px solid var(--line); background: #fff; overflow: hidden; }
+.shot { margin: var(--s-5) 0 0; border: 1px solid var(--line); background: #fff; }
 .shot img { width: 100%; }
 .shot--phone { width: min(100%, 240px); border-radius: 22px; }
 .swiper { margin-top: var(--s-5); width: min(100%, 240px); }
