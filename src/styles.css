@@ -53,6 +53,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 
 /* ---------- nav ---------- */
 .nav { position: sticky; top: 0; z-index: var(--z-nav); display: flex; align-items: center; justify-content: space-between; max-width: var(--max); margin: 0 auto; padding: 16px var(--gutter) 16px calc(var(--gutter) + var(--spine)); background: transparent; backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px); transition: background .35s; }
+.nav { padding-bottom: 40px; margin-bottom: -24px; mask-image: linear-gradient(to right, transparent, #000 6% 94%, transparent), linear-gradient(#000 55%, transparent); mask-composite: intersect; -webkit-mask-image: linear-gradient(to right, transparent, #000 6% 94%, transparent), linear-gradient(#000 55%, transparent); -webkit-mask-composite: source-in; }
 .nav.is-scrolled { background: color-mix(in srgb, var(--bg) 55%, transparent); }
 .nav__brand { display: inline-flex; align-items: center; gap: 6px; font-weight: 800; letter-spacing: .03em; text-decoration: none; font-size: 18px; line-height: 1; }
 .nav__logo { display: block; height: 28px; width: auto; }
