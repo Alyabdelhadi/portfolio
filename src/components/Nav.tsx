@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "motion/react";
 
 const links = [
@@ -12,6 +12,7 @@ const links = [
 export function Nav() {
   const [active, setActive] = useState<string>("");
   const [scrolled, setScrolled] = useState(false);
+  const drawer = useRef<HTMLDialogElement>(null);
   useEffect(() => {
     const f = () => setScrolled(window.scrollY > 80);
     f();
@@ -40,6 +41,17 @@ export function Nav() {
           </a>
         ))}
       </nav>
+      <button className="nav__burger mono" onClick={() => drawer.current?.showModal()} aria-label="Open menu">Menu</button>
+      <dialog className="drawer" ref={drawer} onClick={(e) => e.target === drawer.current && drawer.current.close()}>
+        <button className="drawer__close mono" onClick={() => drawer.current?.close()} aria-label="Close menu">Close</button>
+        <nav className="drawer__links" aria-label="Sections">
+          {links.map(([id, label]) => (
+            <a key={id} href={`#${id}`} className={active === id ? "is-on" : ""} aria-current={active === id ? "location" : undefined} onClick={() => drawer.current?.close()}>
+              {label}
+            </a>
+          ))}
+        </nav>
+      </dialog>
     </header>
   );
 }
