@@ -225,6 +225,10 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .social a { display: inline-flex; align-items: center; gap: 8px; }
 .social svg { display: block; }
 .colophon { margin-top: var(--s-6); color: var(--muted); }
+.services-links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+.services-links a { color: var(--muted); text-decoration: none; }
+.services-links a:hover, .services-links a:focus-visible { color: var(--blue); }
+.services-links + .colophon { margin-top: var(--s-2); }
 
 /* ---------- WhatsApp fab ---------- */
 .fab { position: fixed; right: 24px; bottom: 24px; z-index: var(--z-fab); display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; background: var(--ink); color: #fff; box-shadow: 0 10px 24px -12px rgba(0, 0, 0, .45); transition: background .3s; }

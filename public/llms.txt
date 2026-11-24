@@ -1,11 +1,20 @@
 # Ali Abdelhadi
 
-> Senior Software Developer (Mobile & Full-Stack) based in Beirut, Lebanon. 4+ years building production-grade mobile and web applications from architecture through release: mobile apps, web platforms, backend systems, payments, real-time systems, AI integrations and automation.
+> Freelance Senior Software Developer (Mobile & Full-Stack) based in Beirut, Lebanon. 4+ years building production-grade mobile and web applications from architecture through release: mobile apps, web platforms, backend systems, payments, real-time systems, AI integrations and automation.
 
 - Stack: Flutter, Kotlin/Jetpack Compose, Angular, ASP.NET/.NET Core, Laravel, MSSQL/MySQL/PostgreSQL, Stripe/Areeba/Monty payments, SignalR, n8n, AI APIs
 - Education: Bachelor's in Computer Science, Lebanese International University (2021)
 - Languages: English, Arabic, French
 - Contact: WhatsApp +961 76 618 326
+
+## Services (hire for these)
+
+- [Flutter & mobile app development](https://aliabedelhadi.com/services/flutter-app-development): iOS and Android apps with Flutter, native Android with Kotlin/Jetpack Compose, through store release
+- [Payment gateway integration](https://aliabedelhadi.com/services/payment-integration): Stripe, Areeba and Monty; one-time and recurring payments with server-side webhooks
+- [Web & backend development](https://aliabedelhadi.com/services/web-development): ASP.NET/.NET Core, Angular and Laravel platforms, e-commerce, dashboards, CRMs, real-time systems
+- [AI integration & workflow automation](https://aliabedelhadi.com/services/ai-automation): AI APIs and n8n workflows connected to existing business systems
+
+Available for freelance projects in Lebanon and remotely. Contact via WhatsApp +961 76 618 326 or the portfolio site.
 
 ## Portfolio
 

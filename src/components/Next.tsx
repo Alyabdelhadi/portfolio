@@ -48,7 +48,13 @@ export function Next() {
             </a>
           </span>
         </address>
-        <p className="mono colophon">© {new Date().getFullYear()} Ali Abdelhadi · Problem → Product</p>
+        <nav className="mono colophon services-links" aria-label="Services">
+          <a href="/services/flutter-app-development">Flutter &amp; mobile apps</a>
+          <a href="/services/payment-integration">Payment integration</a>
+          <a href="/services/web-development">Web &amp; .NET development</a>
+          <a href="/services/ai-automation">AI &amp; automation</a>
+        </nav>
+        <p className="mono colophon">© {new Date().getFullYear()} Ali Abdelhadi · Freelance software developer in Beirut, Lebanon</p>
       </div>
     </section>
   );
