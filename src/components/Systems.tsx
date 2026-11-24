@@ -1,10 +1,22 @@
-import { useState } from "react";
-import { motion } from "motion/react";
+import { useEffect, useRef, useState } from "react";
+import { motion, useInView, useReducedMotion } from "motion/react";
 import { approach } from "../data/catalog";
 import { Reveal } from "./Reveal";
 
 export function Systems() {
+  const keys = useRef<HTMLDivElement>(null);
+  const inView = useInView(keys, { margin: "0px 0px -10% 0px" });
+  const reduce = useReducedMotion();
   const [i, setI] = useState(0);
+  const [paused, setPaused] = useState(false);
+
+  // Steps through the areas while in view; pauses while the visitor is pointing at or focused on the keys.
+  useEffect(() => {
+    if (!inView || paused || reduce) return;
+    const id = setTimeout(() => setI((i + 1) % approach.length), 2600);
+    return () => clearTimeout(id);
+  }, [inView, paused, reduce, i]);
+
   return (
     <section className="section systems" id="systems" aria-labelledby="systems-title">
       <div className="wrap">
@@ -14,7 +26,16 @@ export function Systems() {
           <Reveal as="span" className="line line--accent" delay={0.2}>One approach.</Reveal>
         </h2>
         <Reveal className="map" delay={0.2}>
-          <div className="map__keys" role="tablist" aria-label="Areas of work">
+          <div
+            className="map__keys"
+            role="tablist"
+            aria-label="Areas of work"
+            ref={keys}
+            onPointerEnter={() => setPaused(true)}
+            onPointerLeave={() => setPaused(false)}
+            onFocus={() => setPaused(true)}
+            onBlur={(e) => { if (!e.currentTarget.contains(e.relatedTarget)) setPaused(false); }}
+          >
             {approach.map((a, k) => (
               <button
                 key={a.key}
