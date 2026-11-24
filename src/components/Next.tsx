@@ -1,10 +1,18 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useInView } from "motion/react";
 import { Reveal } from "./Reveal";
 import { Typewriter } from "./Typewriter";
 import { useLit } from "./useLit";
 
+/** The address is joined in the browser after load, so it never appears in the HTML that scrapers read. */
+function useMailto() {
+  const [href, setHref] = useState("#contact");
+  useEffect(() => setHref(`mailto:${["Aliabdelhadi64", "gmail.com"].join("@")}`), []);
+  return href;
+}
+
 export function Next() {
+  const mailto = useMailto();
   const ref = useRef<HTMLElement>(null);
   const lit = useLit(ref, "0px 0px -8% 0px");
   const lede = useRef<HTMLParagraphElement>(null);
@@ -22,11 +30,11 @@ export function Next() {
           <Typewriter text="Have something that needs to be built?" start={seen} delay={0.4} speed={40} />
         </p>
         <Reveal delay={0.3}>
-          <a className="btn btn--fill" href="mailto:Aliabdelhadi64@gmail.com?subject=The%20next%20problem">Let's build it</a>
+          <a className="btn btn--fill" href={mailto === "#contact" ? mailto : `${mailto}?subject=The%20next%20problem`}>Let's build it</a>
         </Reveal>
         <address ref={ref} className={`contact mono${lit ? " is-on" : ""}`}>
           <i className="node" />
-          <a href="mailto:Aliabdelhadi64@gmail.com">Aliabdelhadi64@gmail.com</a>
+          <a href={mailto}>Email me</a>
           <a href="tel:+96176618326">+961 76 618326</a>
           <span>Beirut, Lebanon</span>
           <span className="social">

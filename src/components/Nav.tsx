@@ -31,7 +31,7 @@ export function Nav() {
   return (
     <header className={`nav${scrolled ? " is-scrolled" : ""}`} aria-label="Site">
       <a className="nav__brand" href="#top" aria-label="Ali Abdelhadi, back to top">
-        <img className="nav__logo" src="/img/logo.png" alt="ALI." width={262} height={120} />
+        <img className="nav__logo" src="/img/logo.webp" alt="ALI." width={122} height={56} />
       </a>
       <nav className="nav__links mono" aria-label="Sections">
         {links.map(([id, label]) => (

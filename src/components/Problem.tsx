@@ -8,10 +8,14 @@ import { Swiper } from "./Swiper";
 import { useLit } from "./useLit";
 
 function Shot({ project }: { project: Project }) {
+  // Wide screenshots also ship a 640px copy (name-640.webp) so smaller layouts don't download the full 1280px file.
+  const wide = !project.mark && !project.phone && project.image;
   return (
     <figure className={`shot${project.mark ? " shot--mark" : ""}${project.phone ? " shot--phone" : ""}`}>
       <img
         src={project.image}
+        srcSet={wide ? `${wide.replace(/\.webp$/, "-640.webp")} 640w, ${wide} 1280w` : undefined}
+        sizes={wide ? "(max-width: 900px) 100vw, 640px" : undefined}
         alt={project.imageAlt ?? ""}
         loading="lazy"
         decoding="async"

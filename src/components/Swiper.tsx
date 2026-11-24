@@ -32,7 +32,7 @@ export function Swiper({ images, alt }: { images: string[]; alt: string }) {
     <div className="swiper" onPointerEnter={() => setPaused(true)} onPointerLeave={() => setPaused(false)} onTouchStart={() => setPaused(true)}>
       <div className="swiper__track" ref={track} aria-label={alt} role="group">
         {images.map((src, k) => (
-          <img key={src} src={src} alt={`${alt}, screen ${k + 1} of ${images.length}`} loading="lazy" decoding="async" width={640} height={1390} />
+          <img key={src} src={src} alt={`${alt}, screen ${k + 1} of ${images.length}`} loading="lazy" decoding="async" width={640} height={1391} />
         ))}
       </div>
       <div className="swiper__dots" role="tablist" aria-label="Screens">

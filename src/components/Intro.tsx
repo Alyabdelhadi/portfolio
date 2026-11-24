@@ -24,7 +24,7 @@ export function Intro() {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 1.1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
         >
-          <img className="intro__photo" src="/img/ali.webp" alt="Ali Abdelhadi" width={600} height={750} fetchPriority="high" />
+          <img className="intro__photo" src="/img/ali-avatar.webp" alt="Ali Abdelhadi" width={440} height={440} fetchPriority="high" />
           <figcaption className="mono">Ali Abdelhadi<br />Senior Software Developer</figcaption>
         </motion.figure>
       </div>
