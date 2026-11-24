@@ -76,14 +76,14 @@ const services = [
     ],
     work: [
       ["GS1 Lebanon", "Replaced a manual process for issuing barcodes, invoices and certificates with an ASP.NET system.", "https://www.gs1lebanon.org/"],
-      ["YMP", "Real-time voting system with live voting windows, built to stay accurate when many voters act at once.", "https://www.ymplebanon.com/"],
+      ["YMP", "Real-time voting system (SignalR) that handled up to 2M requests and 30,000 votes on election day, staying accurate when many voters act at once.", "https://www.ymplebanon.com/"],
       ["Mohamad Elhabib Real Estate", "Property platform with business logic, calculators and lead integrations exposed through APIs.", "https://alhabib.37-187-35-120.plesk.page/"],
       ["Unipak The Shop", "Full e-commerce store for a packaging manufacturer.", "https://www.unipaktheshop.com/"],
     ],
     stack: ["ASP.NET", ".NET Core", "VB.NET", "Angular", "TypeScript", "Laravel", "PHP", "SignalR", "SQL Server", "MySQL", "PostgreSQL", "Docker"],
     faq: [
       ["Can you replace our manual process with software?", "Yes. That's what the GS1 system did: barcode, invoice and certificate issuing moved from manual work into one ASP.NET system with a database behind it."],
-      ["Do you build real-time systems?", "Yes. YMP's voting platform handles many voters acting in the same window and still produces accurate results, using SignalR-style live updates."],
+      ["Do you build real-time systems?", "Yes. YMP's voting platform, built with SignalR, handled up to 2M requests and 30,000 votes on election day and still produced accurate live results."],
       ["Can you take over or extend an existing system?", "Yes. I work with existing .NET, Angular and Laravel codebases, add features, and fix what's slowing the business down."],
       ["Do you also host and deploy?", "Yes. I set up deployment with Git, CI/CD pipelines and Docker so updates ship reliably."],
     ],

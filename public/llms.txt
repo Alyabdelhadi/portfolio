@@ -22,13 +22,14 @@ Available for freelance projects in Lebanon and remotely. Contact via WhatsApp +
 - [CV (PDF)](https://aliabedelhadi.com/Ali_Abdelhadi_CV.pdf): full work history and skills
 - [GitHub](https://github.com/Alyabdelhadi)
 - [LinkedIn](https://www.linkedin.com/in/alyabdelhadi/)
+- [Upwork](https://www.upwork.com/freelancers/~01d5c9aedd93a8436a): hire through Upwork
 
 ## Selected projects
 
 - [CCCL](https://www.cccl.org.lb/): donation platform with one-time and recurring giving, payment providers and transaction workflows (.NET, Angular, Stripe, Areeba, Monty, SQL)
 - [MedVault](https://play.google.com/store/apps/details?id=com.gtonics.medvault): healthcare app connecting patients with clinics to view and track lab results securely (Flutter, iOS + Android)
 - [Unipak The Shop](https://www.unipaktheshop.com/): complete e-commerce store for a packaging manufacturer: catalog, cart, checkout, orders, API and database
-- [YMP](https://www.ymplebanon.com/): real-time voting system with live voting windows, built for high-concurrency accuracy
+- [YMP](https://www.ymplebanon.com/): real-time voting system (ASP.NET, SignalR) that handled up to 2M requests and 30,000 votes on election day
 - [GS1 Lebanon](https://www.gs1lebanon.org/): ASP.NET system replacing a manual process for issuing barcodes, invoices and certificates
 - [Mohamad Elhabib Real Estate](https://alhabib.37-187-35-120.plesk.page/): property listings with business logic, calculators and lead integrations
 

@@ -55,7 +55,7 @@ export const problems: Project[] = [
     id: "ymp", category: "Real-time",
     question: "How do you make thousands of actions count in real time?",
     name: "YMP", kind: "Voting system",
-    description: "Live voting windows where many voters act at the same moment. The system has to stay accurate under concurrency and show results people can trust.",
+    description: "Live voting windows where many voters act at the same moment. Built with SignalR to stay accurate under concurrency: on election day it handled up to 2M requests and 30,000 votes, with results people could trust.",
     flow: ["Voters", "System", "Validate", "Count", "Result"],
     focus: ["Real-time voting", "High-concurrency integrity", "Live voting windows", "Accurate results"],
     image: "/img/ymp.webp", imageAlt: "The YMP voting platform homepage", link: "https://www.ymplebanon.com/", live: true, fanIn: true,
